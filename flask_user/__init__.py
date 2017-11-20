@@ -14,10 +14,10 @@ from . import forms
 from . import passwords
 from . import settings
 from . import tokens
-from . import translations
+# from . import translations
 from . import views
 from . import signals
-from .translations import get_translations
+# from .translations import get_translations
 
 # Enable the following: from flask_user import current_user
 from flask_login import current_user
@@ -151,14 +151,14 @@ class UserManager(object):
         settings.check_settings(self)
 
         # Initialize Translations -- Only if Flask-Babel has been installed
-        if hasattr(app.jinja_env, 'install_gettext_callables'):
-            app.jinja_env.install_gettext_callables(
-                    lambda x: get_translations().ugettext(x),
-                    lambda s, p, n: get_translations().ungettext(s, p, n),
-                    newstyle=True)
-        else:
-            app.jinja_env.add_extension('jinja2.ext.i18n')
-            app.jinja_env.install_null_translations()
+        # if hasattr(app.jinja_env, 'install_gettext_callables'):
+        #     app.jinja_env.install_gettext_callables(
+        #             lambda x: get_translations().ugettext(x),
+        #             lambda s, p, n: get_translations().ungettext(s, p, n),
+        #             newstyle=True)
+        # else:
+        #     app.jinja_env.add_extension('jinja2.ext.i18n')
+        #     app.jinja_env.install_null_translations()
 
 
         # Create password_crypt_context if needed
@@ -183,7 +183,7 @@ class UserManager(object):
         app.context_processor(_flask_user_context_processor)
 
         # Prepare for translations
-        _ = translations.gettext
+        # _ = translations.gettext
 
 
     def setup_login_manager(self, app):

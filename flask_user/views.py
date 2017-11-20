@@ -10,7 +10,7 @@ from flask_login import current_user, login_user, logout_user
 from .decorators import confirm_email_required, login_required
 from . import emails
 from . import signals
-from .translations import gettext as _
+from .i18n import gettext as _
 
 # Python version specific imports
 from sys import version_info as py_version

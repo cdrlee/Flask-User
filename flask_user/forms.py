@@ -16,7 +16,7 @@ except ImportError:
 
 from wtforms import BooleanField, HiddenField, PasswordField, SubmitField, StringField
 from wtforms import validators, ValidationError
-from .translations import lazy_gettext as _
+from .i18n import lazy_gettext as _
 
 # **************************
 # ** Validation Functions **
