@@ -44,6 +44,7 @@ setup(
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
         'Topic :: Security',
         'Topic :: Software Development :: Libraries :: Python Modules',
@@ -63,7 +64,7 @@ setup(
         'Flask-SQLAlchemy',
         'Flask-WTF',
         'passlib',
-        'pycrypto',
+        'pycryptodome',
     ],
     tests_require=['pytest'],
 )
