@@ -63,7 +63,7 @@ setup(
         'Flask-SQLAlchemy',
         'Flask-WTF',
         'passlib',
-        'pycryptodome',
+        'pycrypto',
     ],
     tests_require=['pytest'],
 )
